@@ -8,6 +8,7 @@ package tempTest.newAbstracClass;/**
  **/
 public class Test {
 
+    //new 一个抽象类，重写抽象方法后，再调用
     public static void main(String[] args) {
         new AbTest("sww","man"){
             @Override
