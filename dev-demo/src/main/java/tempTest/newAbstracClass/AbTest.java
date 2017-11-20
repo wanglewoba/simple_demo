@@ -5,6 +5,7 @@ package tempTest.newAbstracClass;/**
 /**
  * @author sunwenwu
  * @create 2017-11-20 15:17
+ * 测试用例demo，构造一个抽象类
  **/
 public abstract class AbTest {
 
