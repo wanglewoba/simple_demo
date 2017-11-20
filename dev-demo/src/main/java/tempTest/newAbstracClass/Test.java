@@ -10,7 +10,8 @@ public class Test {
 
     //new 一个抽象类，重写抽象方法后，再调用
     public static void main(String[] args) {
-        new AbTest("sww","manman"){
+        new AbTest("swwwenwu","manman"){
+
             @Override
             public void handle() {
                 System.out.println(this.getName()+" "+this.getSex());
