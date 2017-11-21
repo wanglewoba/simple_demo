@@ -53,8 +53,8 @@
         </profile>
 
     </profiles>
-
-        <dependencies>
+<dependencyManagement>
+    <dependencies>
             <!-- http-client -->
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
@@ -159,21 +159,21 @@
             </dependency>
 
             <!-- common部分 -->
-            <dependency>
+        <!--    <dependency>
                 <groupId>commons-digester</groupId>
                 <artifactId>commons-digester</artifactId>
                 <version>2.1</version>
-            </dependency>
+            </dependency>-->
             <dependency>
                 <groupId>commons-pool</groupId>
                 <artifactId>commons-pool</artifactId>
                 <version>1.6</version>
             </dependency>
-            <dependency>
+            <!--<dependency>
                 <groupId>commons-validator</groupId>
                 <artifactId>commons-validator</artifactId>
                 <version>1.4.0</version>
-            </dependency>
+            </dependency>-->
             <dependency>
                 <groupId>commons-discovery</groupId>
                 <artifactId>commons-discovery</artifactId>
@@ -187,17 +187,17 @@
             <dependency>
                 <groupId>commons-lang</groupId>
                 <artifactId>commons-lang</artifactId>
-                <version>2.5</version>
+                <version>2.3</version>
             </dependency>
             <dependency>
                 <groupId>commons-collections</groupId>
                 <artifactId>commons-collections</artifactId>
-                <version>3.2.1</version>
+                <version>3.2</version>
             </dependency>
             <dependency>
                 <groupId>commons-beanutils</groupId>
                 <artifactId>commons-beanutils</artifactId>
-                <version>1.8.3</version>
+                <version>1.7.0</version>
                 <exclusions>
                     <exclusion>
                         <artifactId>commons-logging</artifactId>
@@ -308,8 +308,14 @@
                 <artifactId>validation-api</artifactId>
                 <version>1.1.0.Final</version>
             </dependency>
-        </dependencies>
-
+        <dependency>
+            <groupId>net.sf.json-lib</groupId>
+            <artifactId>json-lib</artifactId>
+            <version>2.4</version>
+            <classifier>jdk15</classifier>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
  <!--   <distributionManagement>
         <repository>
             <id>nexus-releases</id>
