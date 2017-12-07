@@ -67,6 +67,10 @@ public final class BOValidator {
     }
 
     public static void main(String[] args) {
+        /**
+         * 测试结果：
+         * tradeDate:交易日期不能有特殊字符
+         */
         Man m = new Man();
         m.setAge("11");
         m.setName("aaa");
