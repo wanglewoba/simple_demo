@@ -68,7 +68,7 @@ public final class BOValidator {
 
     public static void main(String[] args) {
         Man m = new Man();
-        m.setAge(11);
+        m.setAge("11");
         m.setName("aaa");
         m.setTradeDate("20013000)");
         String validate = BOValidator.validate(m);

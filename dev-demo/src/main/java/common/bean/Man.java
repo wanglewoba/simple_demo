@@ -2,6 +2,8 @@ package common.bean;/**
  * Created by admin on 2017/8/31.
  */
 
+import common.util.xml.XmlTag;
+import org.apache.commons.lang.builder.ToStringBuilder;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -16,10 +18,13 @@ import java.util.List;
  * @create 2017-08-31 11:25
  **/
 public class Man {
+    @XmlTag("name")
     private String name;
 
-    private Integer age;
+    @XmlTag("age")
+    private String age;
 
+    @XmlTag("tradeDate")
     @NotBlank(message = "交易日期不能为空")
     @Length(max = 8, message = "交易日期长度不能大于8")
     @Pattern(regexp = "^[^`~!@#$%^&*()+=|{}':;',//[//].<>/?~！@#￥%……&*（）——+|{}【】‘；：”“’。，、？]*$", message = "交易日期不能有特殊字符")
@@ -33,11 +38,11 @@ public class Man {
         this.name = name;
     }
 
-    public Integer getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(Integer age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
@@ -51,10 +56,7 @@ public class Man {
 
     @Override
     public String toString() {
-        return "Man{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                '}';
+        return ToStringBuilder.reflectionToString(this);
     }
 
     public static void main(String[] args) throws Exception{
