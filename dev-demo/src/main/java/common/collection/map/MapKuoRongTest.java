@@ -1,4 +1,4 @@
-package common.map;/**
+package common.collection.map;/**
  * Created by admin on 2017/9/11.
  */
 

@@ -2,6 +2,10 @@ package common.bean;/**
  * Created by admin on 2017/8/31.
  */
 
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotBlank;
+
+import javax.validation.constraints.Pattern;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -15,6 +19,11 @@ public class Man {
     private String name;
 
     private Integer age;
+
+    @NotBlank(message = "交易日期不能为空")
+    @Length(max = 8, message = "交易日期长度不能大于8")
+    @Pattern(regexp = "^[^`~!@#$%^&*()+=|{}':;',//[//].<>/?~！@#￥%……&*（）——+|{}【】‘；：”“’。，、？]*$", message = "交易日期不能有特殊字符")
+    private String tradeDate;
 
     public String getName() {
         return name;
@@ -30,6 +39,14 @@ public class Man {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public String getTradeDate() {
+        return tradeDate;
+    }
+
+    public void setTradeDate(String tradeDate) {
+        this.tradeDate = tradeDate;
     }
 
     @Override
