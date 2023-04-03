@@ -16,6 +16,8 @@ public class Base64Test
 		commonsCodesBase64();
 
 		bouncyCastleBase64();
+
+		System.out.printf("test commit new company");
 	}
 	
 	// 用jdk实现
